@@ -106,6 +106,33 @@ docker run --rm --name frontend --network frontend-backend-network -p 3000:3000 
 
 Congratulations! At this point, you can open your web browser and navigate to `http://localhost:3000/`. You should see your application's frontend, now successfully communicating with the backend through Docker containers.
 
-This Quickstart Guide has walked you through building and running your application's backend and frontend in Docker. With your containers up and running, you're well on your way to developing and testing your application with ease. Happy coding!
+___
 
-For a detailed guide on how to build this application 
+### [Optional] Simplifying Deployment with Docker Compose
+
+Rather than deploying each container manually you can deploy your containers with one command using [Docker Compose](https://docs.docker.com/compose/). Docker Compose enables you to define and run multi-container Docker applications with ease. Follow these steps to deploy your application using Docker Compose.
+
+**Deploy Your Application** 
+
+1. Navigate to this Project's Root Directory. Ensure you're in the directory containing your docker-compose.yml.
+2. Deploy with Docker Compose: Run the following command:
+
+```bash
+docker-compose up --build
+```
+
+>NOTE: This builds (if necessary) and starts all the services defined in your Docker Compose file.
+
+**Access Your Application**
+
+1. With your containers running, you can access your application by navigating to http://localhost:3000/ in your web browser. You should see your frontend communicating seamlessly with the backend.
+
+**Stopping Your Application**
+
+1. To stop your application and remove the containers, networks, and volumes associated with it, run:
+
+```bash
+docker-compose down
+```
+
+This Quickstart Guide has walked you through building and running your application's backend and frontend in Docker. With your containers up and running, you're well on your way to developing and testing your application with ease. Happy coding!
